@@ -6,7 +6,7 @@ import { Orbitron } from 'next/font/google';
 
 const orbitron = Orbitron({ subsets: ['latin'], weight: ['400', '700'] });
 
-export default function Body({links, selectedLink, setSelectedLink}) {
+export default function Body({links, selectedLink, setSelectedLink, setIsActive}) {
 
     const getChars = (word) => {
         let chars = [];
@@ -30,7 +30,7 @@ export default function Body({links, selectedLink, setSelectedLink}) {
         {
             links.map( (link, index) => {
                 const { title, href } = link;
-                return <Link key={`l_${index}`} href={href}>
+                return <Link key={`l_${index}`} href={href} onClick={() => setIsActive(false)}>
                 <motion.p 
                     onMouseOver={() => {setSelectedLink({isActive: true, index})}} 
                     onMouseLeave={() => {setSelectedLink({isActive: false, index})}} 

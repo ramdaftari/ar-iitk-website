@@ -33,14 +33,10 @@ const links = [
   {
     title: "Sponsors",
     href: "/sponsors"
-  },
-  {
-    title: "Contact Us",
-    href: "/contact"
   }
 ]
 
-export default function Index() {
+export default function Index({ setIsActive }) {
 
   const [selectedLink, setSelectedLink] = useState({isActive: false, index: 0});
 
@@ -48,7 +44,7 @@ export default function Index() {
     <motion.div variants={height} initial="initial" animate="enter" exit="exit" className={`${styles.nav} ${orbitron.className}`}>
       <div className={styles.wrapper}>
         <div className={styles.container}>
-          <Body links={links} selectedLink={selectedLink} setSelectedLink={setSelectedLink}/>
+          <Body links={links} selectedLink={selectedLink} setSelectedLink={setSelectedLink} setIsActive={setIsActive} />
           <Footer />
         </div>
       </div>

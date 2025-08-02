@@ -1,11 +1,21 @@
-.main {
-  padding-top: 1000px;
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  text-align: center;
+  padding: 6rem 1.5rem 2rem;
 }
 
 .title {
-  font-size: 150em;
-  text-align: center;
-  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .vertical-timeline-element-content {
@@ -20,4 +30,66 @@
 
 .vertical-timeline-element-date {
   margin-bottom: 8px;
+}
+
+.gridSection {
+  background: #fff;
+  padding: 1rem 1.5rem 2rem;
+  border-top: 1px solid #e5e7eb;
+  flex: 1 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  border: 1px solid #e5e7eb;
+  text-align: center;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+.cardDate {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardDesc {
+  font-size: 1rem;
+  color: #374151;
+  margin: 0;
+  font-family: sans-serif;
 }
